@@ -1,0 +1,60 @@
+# Ignore documentation folder
+docs/
+
+# Ignore git files
+.git/
+.gitignore
+.gitattributes
+
+# Ignore VS Code and Visual Studio files
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build outputs
+**/bin/
+**/obj/
+**/out/
+
+# Ignore temporary files
+**/*.tmp
+**/*.temp
+**/*.log
+
+# Ignore NuGet packages
+**/packages/
+*.nupkg
+
+# Ignore database files (will be created in container)
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+# Ignore node modules if any
+**/node_modules/
+
+# Ignore local development settings
+**/appsettings.Development.json
+**/launchSettings.json
+
+# Ignore test results
+**/TestResults/
+**/*.trx
+**/*.coverage
+
+# Ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore Docker files themselves when building
+Dockerfile*
+docker-compose*
+.dockerignore

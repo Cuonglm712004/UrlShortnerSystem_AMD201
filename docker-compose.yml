@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  urlshortener:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: urlshortener-app
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_HTTP_PORTS=8080
+    volumes:
+      # Mount a volume for the database to persist data
+      - urlshortener_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  urlshortener_data:
+    driver: local

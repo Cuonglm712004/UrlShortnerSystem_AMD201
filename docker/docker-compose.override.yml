@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  urlshortener:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mount database to local folder for development
+      - ./UrlShortener:/app/data
